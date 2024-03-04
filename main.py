@@ -1,8 +1,11 @@
 import pandas as pd
 
 # Data file paths (replace with actual names of files)
-sales_data_path = "file/ADRM Forecast Operational (3)[1].xlsx"
-team_data_path = "file/CST (8).xlsx"
+deal_file = input("Provide name of deal file: ")
+team_file = input("Provide name of your team file: ")
+
+sales_data_path = f"file/{deal_file}.xlsx"
+team_data_path = f"file/{team_file}.xlsx"
 
 # Read data from both Excel files, specifying the header rows
 sales_data = pd.read_excel(sales_data_path, header=1, dtype={'Opp ID': str})
