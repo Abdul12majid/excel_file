@@ -1,6 +1,6 @@
 import pandas as pd
 from openpyxl import load_workbook
-import time
+from time import sleep
 
 # Data file paths (replace with actual names of files)
 try:
@@ -32,13 +32,13 @@ try:
 
     print("Report generation complete!")
 
-    time.sleep(2)
+    sleep(2)
 
     # Renaming columns
 
     print("Renaming columns...")
 
-    time.sleep(2)
+    sleep(2)
 
 
     new_file = "weekly_report.xlsx"
@@ -63,7 +63,7 @@ try:
 
     print("Modifications complete")
 
-    time.sleep(2)
+    sleep(2)
 
     print("Operation completed")
 

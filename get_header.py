@@ -1,6 +1,6 @@
 import pandas as pd
 from openpyxl import load_workbook
-import time
+from time import sleep
 
 # Data file paths (replace with actual names)
 try:
@@ -20,7 +20,7 @@ try:
 	if 'Unnamed: 0' in x and 'Unnamed: 1' in x:
 		print('Invalid column name, checking next header')
 
-		time.sleep(1)
+		sleep(1)
 
 		file_data = pd.read_excel(file_path, header=1, dtype={'Opp ID': str})  # Read from the first row (header)
 
